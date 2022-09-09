@@ -1,0 +1,9 @@
+h1{
+color: rgb(255, 255, 5);
+background-color: red;
+
+}
+.link{
+    text-decoration: none;
+    /* quitar subrayado del link */
+}
