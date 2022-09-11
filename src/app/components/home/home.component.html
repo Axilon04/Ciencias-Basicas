@@ -6,6 +6,19 @@
   <img src="../../../assets/images/unimeta_universidad_villavicenciofw.png" alt="" class="">
   </div>
 </mat-toolbar>
+<div class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" data-bs-interval="2000" *ngFor="let items of carousel_images">
+      <img src="{{items.image}}" alt="{{items.alt}}" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400">
+    </div>
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="../../../assets/images/fisica.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400">
+    </div>
+  </div>
+</div>
+
+
+
 <button  routerLink="calculo1">calculo1</button>
 <button routerLink="graphicLine">Mostrar Grafica</button>
 

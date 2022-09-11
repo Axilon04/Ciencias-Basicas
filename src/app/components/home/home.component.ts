@@ -11,5 +11,26 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  carousel_images = [
+    {
+      image:"../../../assets/images/biologia.png",
+      alt:"image1"
+    },
+    {
+      image:"../../../assets/images/calculo.png",
+      alt:"image2"
+    },
+    {
+      image:"../../../assets/images/matematica1.png",
+      alt:"image3"
+    },
+    {
+      image:"../../../assets/images/quimica.png",
+      alt:"image4"
+    },
+    {
+      image:"../../../assets/images/tierra.png",
+      alt:"image5"
+    }
+  ];
 }
