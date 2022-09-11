@@ -25,4 +25,5 @@ const tangente = (numero: number) => {
 
 //console.log(calcular(360));
 
+
 export {grados,tangente};

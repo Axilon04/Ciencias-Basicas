@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, ViewChild, ElementRef } from '@angular/core';
 
-import { ChartConfiguration, ChartOptions, ChartType } from "chart.js";
+import { ChartConfiguration, ChartOptions, ChartType, Chart } from "chart.js";
 
-import { grados,tangente } from './calcular';
+import { grados,tangente} from './calcular';
 
 @Component({
   selector: 'app-graphic-lineal',
@@ -11,7 +11,8 @@ import { grados,tangente } from './calcular';
 })
 export class GraphicLinealComponent implements OnInit, OnChanges {
 
-  @Input() numero:number = 0;
+  @ViewChild('tablet') table: ElementRef | undefined;
+  @Input() numero:number = 360;
 
   lineChartData: ChartConfiguration<'line'>['data'] = {
     // EJE X
@@ -33,16 +34,23 @@ export class GraphicLinealComponent implements OnInit, OnChanges {
   };
   lineChartLegend = true;
 
+  public grafica(): void {
+    const elementparrafo: any = document.querySelector('#tabla') as HTMLCanvasElement;
+    console.log(elementparrafo);
+
+  }
+
   constructor() {
 
   }
 
   ngOnInit(): void {
     console.log("init", this.numero);
+    this.grafica();
   }
 
   ngOnChanges(){
-    console.log("update", this.numero);
+
   }
 
 
