@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +23,9 @@ import { NgChartsModule } from 'ng2-charts';
   imports: [
     BrowserModule,
     AdminRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
