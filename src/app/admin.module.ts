@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms'
 
 
 import { AdminRoutingModule } from './admin-routing.module';
@@ -25,7 +26,8 @@ import { NgChartsModule } from 'ng2-charts';
     AdminRoutingModule,
     NgChartsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

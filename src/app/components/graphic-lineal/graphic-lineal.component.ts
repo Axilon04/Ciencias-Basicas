@@ -1,49 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 import { ChartConfiguration, ChartOptions, ChartType } from "chart.js";
 
+import { grados,tangente } from './calcular';
 
 @Component({
   selector: 'app-graphic-lineal',
   templateUrl: './graphic-lineal.component.html',
   styleUrls: ['./graphic-lineal.component.css']
 })
-export class GraphicLinealComponent implements OnInit {
+export class GraphicLinealComponent implements OnInit, OnChanges {
 
-  public lineChartData: ChartConfiguration<'line'>['data'] = {
-    labels: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July'
-    ],
+  @Input() numero:number = 0;
+
+  lineChartData: ChartConfiguration<'line'>['data'] = {
+    // EJE X
+    labels: grados(this.numero),
     datasets: [
       {
-        data: [ 65, 59, 80, 81, 56, 55, 40 ],
-        label: 'Series A',
-        fill: true,
-        tension: 0.5,
-        borderColor: 'black',
-        backgroundColor: 'rgba(255,0,0,0.3)'
+        // EJE Y
+        data: tangente(this.numero),
+        label: 'FUNCION DE LA TANGENTE',
+        fill: false,
+        tension: 0.1,
+        borderColor: 'red',
+        backgroundColor: 'yellow'
       }
     ]
   };
-  public lineChartOptions: ChartOptions<'line'> = {
+  lineChartOptions: ChartOptions<'line'> = {
     responsive: false
   };
-  public lineChartLegend = true;
+  lineChartLegend = true;
 
   constructor() {
 
   }
 
   ngOnInit(): void {
-
+    console.log("init", this.numero);
   }
 
+  ngOnChanges(){
+    console.log("update", this.numero);
+  }
 
 
 }
