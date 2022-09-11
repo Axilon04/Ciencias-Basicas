@@ -1,4 +1,7 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+
+  /* USO EXCLUSIVO DE ESCRITORIO */
+
 *{
   box-sizing: border-box;
   margin: 0;
