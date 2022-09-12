@@ -14,29 +14,15 @@ export class GraphicLinealComponent implements OnInit, OnChanges {
   @ViewChild('tablet') table: ElementRef | undefined;
   @Input() numero:number = 360;
 
-  lineChartData: ChartConfiguration<'line'>['data'] = {
-    // EJE X
-    labels: grados(this.numero),
-    datasets: [
-      {
-        // EJE Y
-        data: tangente(this.numero),
-        label: 'FUNCION DE LA TANGENTE',
-        fill: false,
-        tension: 0.1,
-        borderColor: 'red',
-        backgroundColor: 'yellow'
-      }
-    ]
-  };
-  lineChartOptions: ChartOptions<'line'> = {
-    responsive: false
-  };
-  lineChartLegend = true;
 
-  public grafica(): void {
-    const elementparrafo: any = document.querySelector('#tabla') as HTMLCanvasElement;
-    console.log(elementparrafo);
+
+
+
+  public destroyGraphicChart(){
+
+  }
+
+  public updateGraphic(){
 
   }
 
@@ -45,8 +31,18 @@ export class GraphicLinealComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    console.log("init", this.numero);
-    this.grafica();
+    var myChart =  new Chart('tabla',{
+      type: 'line',
+      data: {
+        datasets: [{
+          data: tangente(this.numero),
+        }],
+        labels: grados(this.numero)
+      },
+      options: {
+        responsive: true,
+      }
+    });
   }
 
   ngOnChanges(){
@@ -55,3 +51,5 @@ export class GraphicLinealComponent implements OnInit, OnChanges {
 
 
 }
+
+
