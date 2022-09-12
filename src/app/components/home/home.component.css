@@ -15,3 +15,37 @@
   cursor: pointer;
 
 }
+.Buttons-menu{
+
+    text-align: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+.bi-star::before {
+  font-size: 20pc;
+
+}
+.bi-book::before {
+  font-size: 19pc;
+}
+.bi-journal-medical::before{
+  font-size: 19pc;
+}
+.bi-star:hover{
+  color: #E30614;
+}
+.bi-book:hover{
+  color: #E30614;
+}
+.bi-journal-medical:hover{
+  color: #E30614;
+}
+
+
+.txtcolor{
+  color: #E30614;
+}
+p{
+  margin-bottom: 0;
+}
+
