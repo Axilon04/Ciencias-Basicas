@@ -11,15 +11,17 @@ const routes: Routes = [
   component:HomeComponent,
 
   children: [
-    {
-      path: 'calculo1',
-      component:Calculo1Component
-    },
-    {
-      path: 'graphicLine',
-      component:GraphicLinealComponent
-    }
+
+
   ]},
+  {
+    path: 'calculo1',
+    component:Calculo1Component
+  },
+  {
+    path: 'graphicLine',
+    component:GraphicLinealComponent
+  }
 ];
 
 @NgModule({

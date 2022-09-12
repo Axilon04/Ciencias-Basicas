@@ -33,4 +33,22 @@ export class HomeComponent implements OnInit {
       alt:"image5"
     }
   ];
+  btns = [
+    {
+      router:"graphicLine",
+      icon:"bi bi-star",
+      text:"Interacciones"
+    },
+    {
+      router:"",
+      icon:"bi bi-book",
+      text:"Libros"
+    },
+    {
+      router:"calculo1",
+      icon:"bi bi-journal-medical",
+      text:"Asignaturas"
+    }
+
+  ];
 }

@@ -16,10 +16,12 @@
     </div>
   </div>
 </div>
+<div class="Buttons-menu" *ngFor="let btn of btns">
+  <button class="IconNav" routerLink="{{btn.router}}">
+    <i class="{{btn.icon}}"></i>
+    <p class="txtcolor">{{btn.text}}</p>
+   </button>
+</div>
 
-
-
-<button  routerLink="calculo1">calculo1</button>
-<button routerLink="graphicLine">Mostrar Grafica</button>
 
 <router-outlet></router-outlet>
