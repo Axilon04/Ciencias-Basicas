@@ -1,13 +1,17 @@
-<p>graphic-lineal works!</p>
+<section class="card">
 
-<div style="display: block;">
+  <a href="https://mythrillfiction.com/" target="_blank"></a>
+
   <section id="contenedor-grafica-tangente">
     <canvas id="tabla"></canvas>
   </section>
 
+  <section class="contenedor-datos">
+    <div class="contenedor-div-form">
+      <input class="input" type="text" [(ngModel)]="numero">
+    </div>
 
-  <p>Ingrese los grados: <input type="text" [(ngModel)]="numero"></p>
-  <p> {{ numero }}</p>
-  <button (click)="destroyGraphicChart()" >Destroy</button>
-  <button (click)="updateGraphicChart()" >Render</button>
-</div>
+  <button class="buttom-graphic" (click)="updateGraphicChart()" >Graphic</button>
+
+  </section>
+</section>

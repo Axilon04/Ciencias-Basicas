@@ -9,7 +9,7 @@ import { grados,tangente } from './calcular';
 })
 export class GraphicLinealComponent implements OnInit {
 
-  @Input() numero:number = 360;
+  @Input() numero:number | any;
 
   public tableElement = () => {
     // LLAMANDO ELEMENTO CANVAS
@@ -28,8 +28,8 @@ export class GraphicLinealComponent implements OnInit {
           labels: grados(this.numero)
         },
         options: {
-          responsive: true,
-
+          // responsive: true,
+          maintainAspectRatio: false,
         }
     });
     return pruebas;
@@ -64,7 +64,7 @@ export class GraphicLinealComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.grafica();
   }
 }
 

@@ -1,51 +1,57 @@
-.Menu-Logo{
-  background-color: #E30614;
-}
-.Logo{
-  margin: 0 auto;
+/* MEDIA QUERI FOR DEKSTOP */
+@media screen and (min-width: 1024px){
 
-}
-.bi-list {
-  font-size: 2.5rem;
-  color: #FFFFFF;
-}
-.IconNav{
-  display: contents;
-  background-color: transparent;
-  cursor: pointer;
+  /* CONTENEDOR NAVAR */
+  .Menu-Logo{
+    /* NOMBRE CULERO */
+    background-color: #E30614;
+  }
 
-}
-.Buttons-menu{
-
-    text-align: center;
+  .contenedor-navar{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    justify-items: end;
     align-items: center;
-    background-color: #f1f1f1;
-}
-.bi-star::before {
-  font-size: 20pc;
+  }
+
+  .bi-list {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+  }
+  .IconNav,
+  .IconNav2{
+    display: contents;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .IconNav i:hover{
+    color: red;
+  }
+
+  .IconNav i::before{
+    font-size: 1rem;
+  }
+
+  .Buttons-menu{
+
+      text-align: center;
+      align-items: center;
+      background-color: #f1f1f1;
+  }
+
+  .txtcolor{
+    color: #E30614;
+  }
+  p{
+    margin-bottom: 0;
+  }
+
 
 }
-.bi-book::before {
-  font-size: 19pc;
-}
-.bi-journal-medical::before{
-  font-size: 19pc;
-}
-.bi-star:hover{
-  color: #E30614;
-}
-.bi-book:hover{
-  color: #E30614;
-}
-.bi-journal-medical:hover{
-  color: #E30614;
-}
 
 
-.txtcolor{
-  color: #E30614;
-}
-p{
-  margin-bottom: 0;
-}
 

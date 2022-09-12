@@ -1,27 +1,47 @@
 <mat-toolbar class="Menu-Logo">
-  <div class="Logo">
-  <button mat-icon-button class="IconNav" >
-   <i class="bi bi-list"></i>
-  </button>
-  <img src="../../../assets/images/unimeta_universidad_villavicenciofw.png" alt="" class="">
-  </div>
+  <section class="contenedor-navar">
+    <img
+      src="../../../assets/images/unimeta_universidad_villavicenciofw.png"
+      alt="logo-unimeta"
+      class="contenedor-img-unimeta"
+    />
+
+    <button mat-icon-button class="IconNav2">
+      <i class="bi bi-list"></i>
+    </button>
+  </section>
 </mat-toolbar>
 <div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item" data-bs-interval="2000" *ngFor="let items of carousel_images">
-      <img src="{{items.image}}" alt="{{items.alt}}" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400">
+    <div
+      class="carousel-item"
+      data-bs-interval="2000"
+      *ngFor="let items of carousel_images"
+    >
+      <img
+        src="{{ items.image }}"
+        alt="{{ items.alt }}"
+        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+        width="800"
+        height="400"
+      />
     </div>
     <div class="carousel-item active" data-bs-interval="1000">
-      <img src="../../../assets/images/fisica.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400">
+      <img
+        src="../../../assets/images/fisica.png"
+        alt=""
+        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+        width="800"
+        height="400"
+      />
     </div>
   </div>
 </div>
 <div class="Buttons-menu" *ngFor="let btn of btns">
-  <button class="IconNav" routerLink="{{btn.router}}">
-    <i class="{{btn.icon}}"></i>
-    <p class="txtcolor">{{btn.text}}</p>
-   </button>
+  <button class="IconNav" routerLink="{{ btn.router }}">
+    <i class="{{ btn.icon }}"></i>
+    <p class="txtcolor">{{ btn.text }}</p>
+  </button>
 </div>
-
 
 <router-outlet></router-outlet>
