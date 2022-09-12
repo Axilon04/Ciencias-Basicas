@@ -1,3 +1,4 @@
+//NPM INSTALL MATHJS
 import * as math from "mathjs";
 
 // FUNCION PARA SACAR LOS GRADOS PARA EL EJE X

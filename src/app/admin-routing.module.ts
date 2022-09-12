@@ -15,11 +15,12 @@ const routes: Routes = [
       path: 'calculo1',
       component:Calculo1Component
     },
-    {
-      path: 'graphicLine',
-      component:GraphicLinealComponent
-    }
+
   ]},
+  {
+    path: 'graphicLine',
+    component:GraphicLinealComponent
+  }
 ];
 
 @NgModule({
