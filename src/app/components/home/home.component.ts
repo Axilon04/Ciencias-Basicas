@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // CARD ASIGNATURAS
   carousel_images = [
     {
       image:"../../../assets/images/biologia.png",
@@ -33,9 +35,10 @@ export class HomeComponent implements OnInit {
       alt:"image5"
     }
   ];
+  //BOTONES DE REDERICIONAMIENTO
   btns = [
     {
-      router:"graphicLine",
+      router:"Interaciones",
       icon:"bi bi-star",
       text:"Interacciones"
     },
@@ -45,7 +48,7 @@ export class HomeComponent implements OnInit {
       text:"Libros"
     },
     {
-      router:"calculo1",
+      router:"Asignaturas",
       icon:"bi bi-journal-medical",
       text:"Asignaturas"
     }

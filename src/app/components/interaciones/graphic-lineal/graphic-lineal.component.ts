@@ -10,6 +10,7 @@ import { grados,tangente } from './calcular';
 export class GraphicLinealComponent implements OnInit {
 
   @Input() numero:number | any;
+  @Input() tiempof:number | any;
 
   public tableElement = () => {
     // LLAMANDO ELEMENTO CANVAS
