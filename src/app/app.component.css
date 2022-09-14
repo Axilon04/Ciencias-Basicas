@@ -7,3 +7,29 @@
   position: inherit;
   top: 100px;
 } */
+@media screen and (min-width: 1024px){
+  /* CONTENEDOR NAVAR */
+  .Menu-Logo{
+    /* NOMBRE CULERO */
+    background-color: #E30614;
+  }
+  .contenedor-navar{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    justify-items: end;
+    align-items: center;
+  }
+
+  .IconNav2{
+    display: contents;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .bi-list {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+  }
+}

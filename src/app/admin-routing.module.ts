@@ -5,14 +5,13 @@ import { Calculo1Component } from './components/calculo1/calculo1.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { GraphicLinealComponent } from './components/graphic-lineal/graphic-lineal.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
 
   children: [
-
-
   ]},
   {
     path: 'calculo1',
