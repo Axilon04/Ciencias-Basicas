@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 import {MatInputModule} from '@angular/material/input';
 
@@ -16,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GraphicLinealComponent } from './components/interaciones/graphic-lineal/graphic-lineal.component';
 
 //  LIBRERIAS PARA LA GRAFIACIONES DE LAS INTERACIONES
+
 import { NgChartsModule } from 'ng2-charts';
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
@@ -39,7 +41,8 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
