@@ -1,11 +1,16 @@
 
 <div class="carousel slide" data-bs-ride="carousel">
+  <section class="contenedor-presentacion">
+    <h1>DEPARTAMENTO DE CIENCIAS BASICAS</h1>
+    <p>  disciplinar y contemplan las ciencias exactas, físicas y naturales (Biología, Física, Geología, Matemáticas y Química). Tienen como fin último comprender los fenómenos asociados a la naturaleza, sus leyes e interacciones. </p>
+  </section>
   <div class="carousel-inner">
     <div
       class="carousel-item"
       data-bs-interval="2000"
       *ngFor="let items of carousel_images"
     >
+
       <img
         src="{{ items.image }}"
         alt="{{ items.alt }}"

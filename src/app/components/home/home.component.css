@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* MEDIA QUERI FOR DEKSTOP */
 @media screen and (min-width: 1024px){
 
@@ -28,6 +33,43 @@
   }
   p{
     margin-bottom: 0;
+  }
+
+  /* MODIFICANDO EL CARUSEL */
+  .carousel-item{
+    width: 400px;
+    height: 400px;
+  }
+
+  /* PRESENTACION IMAGENES Y DESCRIPCION */
+
+  .carousel.slide{
+    /* CONTENEDOR TITULO Y IMAGENES */
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    padding-left: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contenedor-presentacion h1{
+    width: 500px;
+    font-size: 1.2rem;
+    font-style: bold;
+  }
+  .contenedor-presentacion {
+    width: 700px;
+    font-size: 1rem;
+    font-style: bold;
+  }
+
+  .carousel-inner{
+    width: 500px;
+    display: flex;
   }
 
 
