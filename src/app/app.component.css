@@ -30,14 +30,24 @@
   .contenedor-navar img{
     /* IMAGEN LOGO */
     width: auto;
-    height: 90px;
-  }
+    height: 120p;
 
+  }
+  .contenedor-navar .IconNav2 {
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    border-style: none;
+  }
+  .contenedor-navar .IconNav2 .bi.bi-list {
+    font-size: 40px;
+  }
 
 
   mat-sidenav-container{
     width: 100%;
     height: auto;
+    
   }
 
 }
