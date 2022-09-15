@@ -1,32 +1,29 @@
-/* .contenedor{
-  background-color: blueviolet;
-  color: white;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.contenedor h1{
-  position: inherit;
-  top: 100px;
-} */
 @media screen and (min-width: 1024px){
   /* CONTENEDOR NAVAR */
-  .Menu-Logo{
-    /* NOMBRE CULERO */
-    background-color: #E30614;
+
+  mat-toolbar{
+    width: 100%;
   }
 
   .Menu-Logo{
     /* LOGO */
+    width: 100%;
     height: auto;
+    background-color: #E30614;
   }
 
   .contenedor-navar{
       /* CONTENEDOR NAVAR UNIMETA */
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    justify-content: center;
-    justify-items: end;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
     align-items: center;
   }
 
@@ -36,15 +33,6 @@
     height: 90px;
   }
 
-  .IconNav2{
-    display: contents;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .bi-list {
-    font-size: 2.5rem;
-    color: #FFFFFF;
-  }
 
 
   mat-sidenav-container{

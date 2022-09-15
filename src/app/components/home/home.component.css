@@ -6,34 +6,7 @@
 /* MEDIA QUERI FOR DEKSTOP */
 @media screen and (min-width: 1024px){
 
-  .IconNav,
-  .IconNav2{
-    display: contents;
-    background-color: transparent;
-    cursor: pointer;
-  }
 
-  .IconNav i:hover{
-    color: red;
-  }
-
-  .IconNav i::before{
-    font-size: 1rem;
-  }
-
-  .Buttons-menu{
-
-      text-align: center;
-      align-items: center;
-      background-color: #f1f1f1;
-  }
-
-  .txtcolor{
-    color: #E30614;
-  }
-  p{
-    margin-bottom: 0;
-  }
 
   /* MODIFICANDO EL CARUSEL */
   .carousel-item{
