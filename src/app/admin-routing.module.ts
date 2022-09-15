@@ -8,6 +8,7 @@ import { GraphicLinealComponent } from './components/interaciones/graphic-lineal
 import { AppComponent } from './app.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
+import { BodyComponent } from './components/body/body.component';
 
 const routes: Routes = [
   { path: '',

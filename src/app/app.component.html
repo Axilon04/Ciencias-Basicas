@@ -1,43 +1,7 @@
-<mat-toolbar class="Menu-Logo">
-    <section class="contenedor-navar">
-      <button mat-icon-button class="IconNav2" (click)="snav.toggle()">
-        <i class="bi bi-list"></i>
-      </button>
-      <img routerLink=""
-        src="../../../assets/images/unimeta_universidad_villavicenciofw.png"
-        alt="logo-unimeta"
-        class="contenedor-img-unimeta"
-      />
-    </section>
-</mat-toolbar>
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)">
 
-<mat-sidenav-container
-    class="sidenav-container mat-sidenav-radius"
-    [style.marginTop.rem]="mobileQuery.matches ? 10 : 0"
-  >
-    <mat-sidenav
-      #snav
-      [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches"
-      fixedTopGap="161"
-      class="mat-sidenav-radius mat-sidenav-list"
-      [(opened)]="opened"
-    >
-    <mat-nav-list *ngFor="let nav of fillerNav" (click)="menu()">
-      <a mat-list-item routerLink="." >
-        {{ nav }}
-      </a>
-    </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content >
-      <!-- Contenido -->
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
-<footer>
-
-</footer>
-
-
-
-
+</app-sidenav>
+<app-body
+  [collapsed]="isSideNavCollapsed"
+  [screenWidth]="screenWidth"
+></app-body>

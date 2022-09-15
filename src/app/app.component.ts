@@ -1,5 +1,10 @@
-import { Component, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, Host, HostListener, ViewEncapsulation } from '@angular/core';
+
+
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,29 +13,11 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'Ciencias_Basicas';
-  opened:boolean = false;
+  isSideNavCollapsed = false;
+  screenWidth = 0;
 
-  mobileQuery: MediaQueryList;
-
-  fillerNav = ["asignaturas",""
-  ];
-
-  private _mobileQueryListener: () => void;
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-
-
+  onToggleSideNav(data: SideNavToggle): void{
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
   }
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-  menu(){
-
-    this.opened = false;
-  }
-
-
-
 }

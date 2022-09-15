@@ -21,6 +21,8 @@ import { GraphicLinealComponent } from './components/interaciones/graphic-lineal
 import { NgChartsModule } from 'ng2-charts';
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
     GraphicLinealComponent,
     InteracionesComponent,
     AsignaturasComponent,
+    SidenavComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,
