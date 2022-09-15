@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Chart } from "chart.js";
-import { grados,tangente } from './calcular';
+import { amplitud,seno2 } from './calcular';
 
 @Component({
   selector: 'app-graphic-lineal',
@@ -10,8 +10,10 @@ import { grados,tangente } from './calcular';
 export class GraphicLinealComponent implements OnInit {
 
   @Input() numero:number | any;
-  @Input() tiempof:number | any;
-
+  @Input() tiempoF:number | any;
+  @Input() tiempoR:number | any;
+  @Input() omega:number | any;
+  @Input() fi:number | any;
   public tableElement = () => {
     // LLAMANDO ELEMENTO CANVAS
     const element = document.querySelector('#tabla') as HTMLCanvasElement;
@@ -24,16 +26,21 @@ export class GraphicLinealComponent implements OnInit {
       type: 'line',
       data: {
         datasets: [{
-            data: tangente(this.numero),
+          //EJE Y
+            data: seno2(this.tiempoF,this.tiempoR,this.numero,this.omega,this.fi),
           }],
-          labels: grados(this.numero)
+          // EJE X
+          labels: amplitud(this.tiempoF,this.tiempoR),
         },
         options: {
           // responsive: true,
           maintainAspectRatio: false,
         }
     });
+    console.log(seno2(this.tiempoF,this.tiempoR,this.omega,this.numero,this.fi))
+    console.log(amplitud(this.tiempoF,this.tiempoR))
     return pruebas;
+
   }
 
   public updateGraphicChart(){
@@ -48,6 +55,7 @@ export class GraphicLinealComponent implements OnInit {
 
     // CREACION DE LA NUEVA GRAFICA CON LOS NUEVOS DATOS
     this.grafica();
+
   }
 
   public destroyGraphicChart(){
@@ -66,7 +74,6 @@ export class GraphicLinealComponent implements OnInit {
 
   ngOnInit(): void {
     this.grafica();
+
   }
 }
-
-

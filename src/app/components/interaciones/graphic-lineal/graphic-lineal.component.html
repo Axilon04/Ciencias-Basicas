@@ -8,11 +8,11 @@
 
   <section class="contenedor-datos">
     <div class="contenedor-div-form">
-      <input  class="input" type="text" [(ngModel)]="numero">
-      <input id="inputNumeroF" class="input" type="text" [(ngModel)]="tiempof" >
-      <input id="" class="input" type="text">
-      <input id="" class="input" type="text">
-
+      <input placeholder="w" class="input" type="number" [(ngModel)]="omega">
+      <input placeholder="t recorrido final" class="input" type="number" [(ngModel)]="tiempoF">
+      <input placeholder="paso del tiempo" class="input" type="number" [(ngModel)]="tiempoR">
+      <input placeholder="amplitud" class="input" type="number" [(ngModel)]="numero">
+      <input placeholder="φ" class="input" type="number" [(ngModel)]="fi">
     </div>
 
   <button class="buttom-graphic" (click)="updateGraphicChart()" >Graphic</button>
