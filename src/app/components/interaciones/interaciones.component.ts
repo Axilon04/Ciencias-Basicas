@@ -14,12 +14,17 @@ export class InteracionesComponent implements OnInit {
   interacion = [
     {
       routerlink:"/graphicline",
-      title:"Funcion del Seno",
+      title:"Movimiento Armonico Simple",
       src:"../../../assets/images/grafica.jpeg"
     },
     {
       routerlink:"/tagencialLine",
       title:"Funcion tagencial",
+      src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
+    },
+    {
+      routerlink:"/senoLine",
+      title:"Funcion seno",
       src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
     }
 

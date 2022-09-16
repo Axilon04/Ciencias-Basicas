@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   <header class="encabezado">
     <section class="titulo">
       <h1>Interacciones</h1>
@@ -8,31 +7,14 @@
     </section>
   </header>
   <hr>
-<section class="contenedor-interaciones">
-  
-  <button class="botones-interaciones" routerLink="/graphicLine">
-    <section class="contenedor-datos">
-      <h1 class="titulo">Movimiento armonico simple</h1>
-=======
 <section class="contenedor-interaciones" >
   <button class="botones-interaciones"*ngFor="let interaciones of interacion" routerLink="{{interaciones.routerlink}}">
     <section class="contenedor-datos">
       <h1 class="titulo">{{interaciones.title}}</h1>
->>>>>>> c2b9f73b065c45a7d2531d9eecb7eb62d28f75be
     </section>
     <img
       class="imagen"
       src="{{interaciones.src}}"
-      alt="gradica"
-    />
-  </button>
-  <button class="botones-interaciones" routerLink="/senoLine">
-    <section class="contenedor-datos">
-      <h1 class="titulo">Funcion del Seno</h1>
-    </section>
-    <img
-      class="imagen"
-      src="../../../assets/images/seno1.png"
       alt="gradica"
     />
   </button>
