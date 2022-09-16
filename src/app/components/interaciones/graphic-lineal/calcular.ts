@@ -62,7 +62,7 @@ const amplitud =(tiempoF:number,tiempoR:number)=>{
     count=index;
     amplitud.push((count).toFixed(2)) ;
 
-    console.log(count);
+    // console.log(count);
   }
 
   return amplitud;
@@ -76,7 +76,7 @@ const seno2 =(tiempoF:number,tiempoR:number,numero:number,omega:number,fi:number
   var ecuacion2:number;
   var ecuacion3:number;
   for (let index =(0); index <= (tiempoF); index+=tiempoR) {
-    console.log(index)
+    // console.log(index)
     ecuacion1=omega*index;
     ecuacion2=ecuacion1+fi ;
     ecuacion3=Math.sin(ecuacion2);

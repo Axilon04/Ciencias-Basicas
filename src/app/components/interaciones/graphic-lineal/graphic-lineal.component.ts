@@ -37,8 +37,7 @@ export class GraphicLinealComponent implements OnInit {
           maintainAspectRatio: false,
         }
     });
-    console.log(seno2(this.tiempoF,this.tiempoR,this.omega,this.numero,this.fi))
-    console.log(amplitud(this.tiempoF,this.tiempoR))
+
     return pruebas;
 
   }
@@ -66,7 +65,7 @@ export class GraphicLinealComponent implements OnInit {
   public graphic(): void{
     // INICIALIZANDO GRAFICA PREDETERMINADA
     this.grafica();
-    console.log("si mi pana estoy tratando de crear tabla");
+
   }
 
   constructor() {
