@@ -11,5 +11,17 @@ export class InteracionesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  interacion = [
+    {
+      routerlink:"/graphicline",
+      title:"Funcion del Seno",
+      src:"../../../assets/images/grafica.jpeg"
+    },
+    {
+      routerlink:"/tagencialLine",
+      title:"Funcion tagencial",
+      src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
+    }
 
+  ]
 }

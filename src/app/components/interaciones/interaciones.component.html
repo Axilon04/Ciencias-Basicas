@@ -1,22 +1,11 @@
-<section class="contenedor-interaciones">
-  <button class="botones-interaciones" routerLink="/graphicLine">
+<section class="contenedor-interaciones" >
+  <button class="botones-interaciones"*ngFor="let interaciones of interacion" routerLink="{{interaciones.routerlink}}">
     <section class="contenedor-datos">
-      <h1 class="titulo">Funcion del Seno</h1>
+      <h1 class="titulo">{{interaciones.title}}</h1>
     </section>
     <img
       class="imagen"
-      src="../../../assets/images/grafica.jpeg"
-      alt="gradica"
-    />
-  </button>
-
-  <button class="botones-interaciones" routerLink="/tagencialLine">
-    <section class="contenedor-datos">
-      <h1 class="titulo">Funcion tagencial</h1>
-    </section>
-    <img
-      class="imagen"
-      src="../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
+      src="{{interaciones.src}}"
       alt="gradica"
     />
   </button>
