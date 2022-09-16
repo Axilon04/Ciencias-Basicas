@@ -1,0 +1,128 @@
+@media screen and (min-width: 1024px){
+
+
+  #contenedor-grafica-tangente2{
+    height: 280px;
+    width: 470px;
+  }
+
+  .contenedor-datos{
+    display: flex;
+    align-items: center;
+    font-family: 'poppins', serif;
+  }
+
+  .buttom-graphic{
+    width: 120px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+
+    margin-left: 20px;
+
+    border: none;
+
+    background: conic-gradient(from 19.44deg at 6.83% -111.63%, #01FD66 0deg, rgba(1, 253, 238, 0.906848) 33.53deg, #0184FD 152.32deg, #012DC8 224.87deg, #9801B1 339.35deg, #01FD66 360deg);
+    backdrop-filter: blur(41px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 23px;
+  }
+
+  .input{
+    height: 40px;
+    padding-left: 20px;
+
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #191c29;
+    border:3px solid  rgb(1, 90, 206);
+
+  }
+  .input::placeholder{
+    color: white;
+  }
+
+
+
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
+  :root {
+    --card-height: 400px;
+    --card-width: 600px;
+  }
+
+  .card {
+    margin: 20px;
+
+    background: #191c29;
+    width: 600px;
+    height: 400px;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+  }
+
+  .card::before {
+    content: "";
+    width: 103%;
+    height: 104%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -7px;
+      left: -9px;
+      animation: spin 2.5s linear infinite;
+  }
+
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+
+
+
+
+
+}

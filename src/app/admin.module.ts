@@ -23,6 +23,7 @@ import { InteracionesComponent } from './components/interaciones/interaciones.co
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyComponent } from './components/body/body.component';
+import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BodyComponent } from './components/body/body.component';
     AsignaturasComponent,
     SidenavComponent,
     BodyComponent,
+    TagencialComponent,
   ],
   imports: [
     BrowserModule,

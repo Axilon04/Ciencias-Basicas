@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
 import { BodyComponent } from './components/body/body.component';
+import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 
 const routes: Routes = [
   { path: '',
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'graphicLine',
     component:GraphicLinealComponent
+  },
+  {
+    path: 'tagencialLine',
+    component:TagencialComponent
   },
 
 ];

@@ -1,30 +1,29 @@
 //NPM INSTALL MATHJS
 import * as math from "mathjs";
 
-// // FUNCION PARA SACAR LOS GRADOS PARA EL EJE X
-// const grados = (numero: number) => {
-//   let grados = [];
-//   for (let index = -(numero); index <= numero; index += 5) {
-//     grados.push(index);
-//   }
-//   return grados;
-// }
+ // FUNCION PARA SACAR LOS GRADOS PARA EL EJE X
+ const gradosT = (numero: number) => {
+   let grados = [];
+   for (let index = -(numero); index <= numero; index += 5) {
+     grados.push(index);
+   }
+   return grados;
+ }
 
-// // FUNCION PARA SACAR LA TANGENTE DE LOS GRADOS PARA EL EJE Y
-// const tangente = (numero: number) => {
-//   let tangente = [];
-//   for (let index = -(numero); index <= numero; index += 5) {
-//     if (index == -270 || index == -90 || index == 90 || index == 270){
-//       tangente.push(null);
-//     }else{
-//       tangente.push(Math.tan(index * math.pi/180));
-//     }
+ // FUNCION PARA SACAR LA TANGENTE DE LOS GRADOS PARA EL EJE Y
+ const tangente = (numero: number) => {
+   let tangente = [];
+   for (let index = -(numero); index <= numero; index += 5) {
+     if (index == -270 || index == -90 || index == 90 || index == 270){
+       tangente.push(null);
+     }else{
+       tangente.push(Math.tan(index * math.pi/180));
+     }
 
-//   }
-//   return tangente;
-// }
+   }
+   return tangente;
+ }
 
-// export {grados,tangente};
 
 
 // DOS FUNCIONES QUE AL INGRESAR UN GRADO REALICE LA RADIAL-(SENO) LOS GRADOS EN UN VECTOR Y LOS ESULTADOS EN OTRO VECTOR
@@ -85,4 +84,4 @@ const seno2 =(tiempoF:number,tiempoR:number,numero:number,omega:number,fi:number
     }
     return seno2;
 }
-export {amplitud,seno2}
+export {amplitud,seno2,gradosT,tangente}
