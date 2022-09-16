@@ -15,22 +15,32 @@
   width: 100%;
 }
 .sidenav .logo-container .logo {
-  background: #fff;
+  background: transparent;
   text-align: center;
   width: 3rem;
   min-width: 3rem;
   border-radius: 0.313rem;
   padding: 0.313rem;
-  font-size: 24px;
   font-weight: 900;
   cursor: pointer;
   border: none;
+  color: transparent;
+}
+.sidenav .logo-container .logo .bi.bi-list img {
+  position: relative;
+  top: -8px;
+  width: 50px;
+  height: 50px;
 }
 .sidenav .logo-container .logo-text {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   font-size: 24px;
   font-weight: 700;
   color: #fff;
+}
+.sidenav .logo-container .logo-text img{
+width: 170px;
+height: 100px;
 }
 .sidenav .logo-container .btn-close {
   margin-left: auto;
