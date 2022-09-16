@@ -3,7 +3,7 @@
       <h1>Interacciones</h1>
     </section>
     <section class="buscar">
-      <input type="buscar">
+      <input class="search"   type="buscar">
     </section>
   </header>
   <hr>
@@ -11,11 +11,14 @@
   <button class="botones-interaciones"*ngFor="let interaciones of interacion" routerLink="{{interaciones.routerlink}}">
     <section class="contenedor-datos">
       <h1 class="titulo">{{interaciones.title}}</h1>
+      <p class="subtitle">{{interaciones.subtitle}}</p>
     </section>
-    <img
+    <section class="imagenes"><img
       class="imagen"
       src="{{interaciones.src}}"
       alt="gradica"
     />
+    </section>
+    
   </button>
 </section>

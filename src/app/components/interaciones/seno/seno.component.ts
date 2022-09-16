@@ -25,6 +25,7 @@ export class SenoComponent implements OnInit {
         datasets: [{
           //EJE Y
             data: seno(this.number),
+            
           }],
           // EJE X
           labels: grados(this.number),

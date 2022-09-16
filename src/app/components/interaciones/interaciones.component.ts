@@ -13,19 +13,22 @@ export class InteracionesComponent implements OnInit {
   }
   interacion = [
     {
-      routerlink:"/graphicline",
+      routerlink:"/graphicLine",
       title:"Movimiento Armonico Simple",
+      subtitle: "descripcion",
       src:"../../../assets/images/grafica.jpeg"
     },
     {
       routerlink:"/tagencialLine",
       title:"Funcion tagencial",
+      subtitle: "descripcion",
       src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
     },
     {
       routerlink:"/senoLine",
       title:"Funcion seno",
-      src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
+      subtitle: "descripcion",
+      src:"../../../assets/images/seno1.png"
     }
 
   ]
