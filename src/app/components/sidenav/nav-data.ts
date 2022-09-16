@@ -9,6 +9,10 @@ export const navbarData = [
       icon: 'bi bi-tv-fill',
       label: 'Interaciones'
   },
-
+  {
+      routeLink: 'Asignaturas',
+      icon: 'bi bi-journals',
+      label: 'Asignaturas'
+  }
 
 ];

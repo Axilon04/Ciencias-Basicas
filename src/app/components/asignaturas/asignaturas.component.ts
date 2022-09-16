@@ -11,5 +11,12 @@ export class AsignaturasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  asignatura = [
+    {
+      materia:'Calculo I'
+    },
+    {
+      materia:'Calculo II'
+    }
+  ]
 }
