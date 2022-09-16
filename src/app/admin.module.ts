@@ -24,6 +24,7 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
+import { SenoComponent } from './components/interaciones/seno/seno.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TagencialComponent } from './components/interaciones/tagencial/tagencia
     SidenavComponent,
     BodyComponent,
     TagencialComponent,
+    SenoComponent,
   ],
   imports: [
     BrowserModule,

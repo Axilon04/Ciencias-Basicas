@@ -2,22 +2,40 @@
   .contenedor-interaciones{
     width: 100%;
     height: 100vh;
-    background-color: white;
-
+    background-color: #f1f1f1;
+    margin-top: 197px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
-    background-repeat: no-repeat;
+    background-repeat : no-repeat ;
     background-size: cover;
+    flex-direction: column;
+  
   }
-
-
+  .encabezado{
+    margin-top: -6px;
+    margin-bottom: 18px ;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .encabezado .buscar{
+    margin-top: 22px;
+  }
+  .encabezado .titulo{
+    margin-top: 22px;
+  }
   .botones-interaciones{
-    width: 400px;
+    width: 95%;
     height: 300px;
-
+    margin-left: 57px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +55,7 @@
     animation: movimiento 5s ease infinite;
 
     margin-right: 50px;
-
+    margin-top: 50px;
   }
 
   @keyframes movimiento {

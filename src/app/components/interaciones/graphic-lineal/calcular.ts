@@ -13,14 +13,17 @@ import * as math from "mathjs";
  // FUNCION PARA SACAR LA TANGENTE DE LOS GRADOS PARA EL EJE Y
  const tangente = (numero: number) => {
    let tangente = [];
-   for (let index = -(numero); index <= numero; index += 5) {
-     if (index == -270 || index == -90 || index == 90 || index == 270){
-       tangente.push(null);
-     }else{
-       tangente.push(Math.tan(index * math.pi/180));
-     }
-
-   }
+  if (numero>360) {
+    alert("Este valor no es permitido ingrese un valor menor a 360");
+    console.log("Este valor no es permitido ingrese un valor menor a 360")
+    for (let index = -(numero); index <= numero; index += 5) {
+      if (index == -270 || index == -90 || index == 90 || index == 270){
+        tangente.push(null);
+      }else{
+        tangente.push(Math.tan(index * math.pi/180));
+      }
+    }
+  }
    return tangente;
  }
 
@@ -31,9 +34,8 @@ import * as math from "mathjs";
 const grados = (numero:number) =>{
   let grados =[];
   if (numero>360) {
-
+    alert("Este valor no es permitido ingrese un valor menor a 360");
     console.log("Este valor no es permitido ingrese un valor menor a 360")
-
   }
   else{
     for (let index =(numero); index >= 0; index-=5) {
@@ -84,4 +86,4 @@ const seno2 =(tiempoF:number,tiempoR:number,numero:number,omega:number,fi:number
     }
     return seno2;
 }
-export {amplitud,seno2,gradosT,tangente}
+export {amplitud,seno2,gradosT,tangente,grados,seno}

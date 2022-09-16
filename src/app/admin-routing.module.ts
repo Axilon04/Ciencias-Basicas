@@ -10,7 +10,7 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
 import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
-
+import { SenoComponent } from './components/interaciones/seno/seno.component';
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -37,7 +37,10 @@ const routes: Routes = [
     path: 'tagencialLine',
     component:TagencialComponent
   },
-
+  {
+    path: 'senoLine',
+    component:SenoComponent
+  },
 ];
 
 @NgModule({
