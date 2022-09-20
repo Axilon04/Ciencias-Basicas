@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   // CARD ASIGNATURAS
   carousel_images = [
     {
-      image:"../../../assets/images/biologia.png",
+      image:"/src/assets/images/calculo.png",
       alt:"image1"
     },
     {
