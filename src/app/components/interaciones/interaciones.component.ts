@@ -16,19 +16,19 @@ export class InteracionesComponent implements OnInit {
       routerlink:"/graphicLine",
       title:"Movimiento Armonico Simple",
       subtitle: "descripcion",
-      src:"../../../assets/images/grafica.jpeg"
+      src:"./assets/images/grafica.jpeg"
     },
     {
       routerlink:"/tagencialLine",
       title:"Funcion tagencial",
       subtitle: "descripcion",
-      src:"../../../assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
+      src:"./assets/images/WhatsApp Image 2022-09-16 at 2.28.32 AM.jpeg"
     },
     {
       routerlink:"/senoLine",
       title:"Funcion seno",
       subtitle: "descripcion",
-      src:"../../../assets/images/seno1.png"
+      src:"./assets/images/seno1.png"
     }
 
   ]
