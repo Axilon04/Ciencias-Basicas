@@ -16,7 +16,7 @@ import * as math from "mathjs";
   if (numero>360) {
     alert("Este valor no es permitido ingrese un valor menor a 360");
     console.log("Este valor no es permitido ingrese un valor menor a 360")
-    
+
       }else{
         for (let index = -(numero); index <= numero; index += 5) {
           if (index == -270 || index == -90 || index == 90 || index == 270){
@@ -88,4 +88,6 @@ const seno2 =(tiempoF:number,tiempoR:number,numero:number,omega:number,fi:number
     }
     return seno2;
 }
+
+
 export {amplitud,seno2,gradosT,tangente,grados,seno}
