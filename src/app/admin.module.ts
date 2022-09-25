@@ -25,6 +25,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 import { SenoComponent } from './components/interaciones/seno/seno.component';
+import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component';
+import { AnimationsObjectsDirective } from './directives/animations-objects.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { SenoComponent } from './components/interaciones/seno/seno.component';
     BodyComponent,
     TagencialComponent,
     SenoComponent,
+    MasaResorteComponent,
+    AnimationsObjectsDirective,
   ],
   imports: [
     BrowserModule,
