@@ -1,5 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
-import * as animejs from 'animejs';
+import anime from 'animejs';
+//import anime from 'animejs';
+
 
 
 @Directive({
@@ -8,21 +10,26 @@ import * as animejs from 'animejs';
 export class AnimationsObjectsDirective {
 
   constructor(
-    public elementos: ElementRef
+    private elementos: ElementRef
   ) {
     console.log(elementos)
     this.animationPrueba();
   }
 
   public animationPrueba(){
-    const variable = animejs({
-      targets: 'div',
-      translateX: 100,
-      easing: 'easeOutQuad',
-      duration: 100,
+    anime({
+      targets: this.elementos.nativeElement,
+      keyframes: [
+        {translateY: -40},
+        {translateX: 250},
+        {translateY: 40},
+        {translateX: 0},
+        {translateY: 0}
+      ],
+      duration: 4000,
+      easing: 'easeOutElastic(1, .8)',
       loop: true
     });
-    return variable;
   }
 
 
