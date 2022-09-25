@@ -11,7 +11,6 @@ import { InteracionesComponent } from './components/interaciones/interaciones.co
 import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 import { SenoComponent } from './components/interaciones/seno/seno.component';
-import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component'
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -41,10 +40,6 @@ const routes: Routes = [
   {
     path: 'senoLine',
     component:SenoComponent
-  },
-  {
-    path: 'masaResorteLine',
-    component:MasaResorteComponent
   },
 ];
 
