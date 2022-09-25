@@ -30,6 +30,13 @@ export class InteracionesComponent implements OnInit {
       subtitle: "descripcion",
       src:"./assets/images/seno1.png"
     }
+    ,
+    {
+      routerlink:"/masaResorteLine",
+      title:"Sistema Masa Resorte (Beta)",
+      subtitle: "descripcion",
+      src:"./assets/images/seno1.png"
+    }
 
   ]
 }

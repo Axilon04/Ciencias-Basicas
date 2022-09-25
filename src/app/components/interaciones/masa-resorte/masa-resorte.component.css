@@ -1,0 +1,106 @@
+@media screen and (min-width: 1024px){
+
+  *{
+    font-family: poppins;
+  }
+
+  .contenedor-oscilacion{
+    height: 300px;
+    width: 98%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(39, 39, 39);
+    border-radius: 20px;
+
+    margin: 15px;
+  }
+
+  .esfera{
+    width: 50px;
+    height: 50px;
+    background-color: #ffd012;
+    border-radius: 50%;
+
+    position: relative;
+    right: 0px;
+  }
+
+  .contenedorFormula{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input{
+    width: 80px;
+    height: 30px;
+
+    position: relative;
+    top: -10px;
+
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+
+    background-color: var(--backgroundInput);
+    color: var(--backgroundTexto);
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 20px;
+  }
+
+  #inputTime{
+    width: 200px;
+  }
+
+  .start{
+    width: 150px;
+    height: 40px;
+
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+
+    font-size: 20px;
+
+    color: white;
+    background-color: #e30614;
+
+    transition: 300ms;
+    margin-top: 20px;
+  }
+
+  .start:hover{
+    transform: translateY(-5px);
+    background-color: white;
+    color: #e30614;
+    box-shadow: 0px 19px 38px 0px rgba(0,0,0,0.3),
+    0px 15px 12px 0px rgba(0,0,0,0.22);
+  }
+
+  .start:active{
+    background-color: #ffd012;
+    color: white;
+  }
+
+  .contenedorTime{
+    margin-left: 15px;
+  }
+
+  .contenedorBotones{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    padding-right: 15px;
+  }
+}
