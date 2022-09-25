@@ -1,6 +1,6 @@
 import { Directive, ElementRef } from '@angular/core';
-//import * as anime from 'animejs';
-import anime from 'animejs/lib/anime.es';
+import * as anime from 'animejs';
+// import anime from 'animejs/lib/anime.es';
 
 
 @Directive({
