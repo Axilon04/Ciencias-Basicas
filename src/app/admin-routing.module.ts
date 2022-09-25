@@ -12,6 +12,7 @@ import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component'
+import { AboutComponent } from './components/about/about.component';
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -46,6 +47,10 @@ const routes: Routes = [
     path: 'masaResorteLine',
     component:MasaResorteComponent
   },
+  {
+    path: 'About',
+    component:AboutComponent
+  }
 ];
 
 @NgModule({

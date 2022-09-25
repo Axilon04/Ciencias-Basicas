@@ -27,6 +27,7 @@ import { TagencialComponent } from './components/interaciones/tagencial/tagencia
 import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component';
 import { AnimationsObjectsDirective } from './directives/animations-objects.directive';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AnimationsObjectsDirective } from './directives/animations-objects.dire
     SenoComponent,
     MasaResorteComponent,
     AnimationsObjectsDirective,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
