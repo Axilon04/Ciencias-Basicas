@@ -1,25 +1,28 @@
 import { Directive, ElementRef } from '@angular/core';
-//import * as anime from 'animejs';
-import anime from 'animejs/lib/anime.es';
+import * as animejs from 'animejs';
 
 
 @Directive({
-  selector: '[appAnimationsObjects],[animeData]'
+  selector: '[appAnimationsObjects]'
 })
 export class AnimationsObjectsDirective {
 
   constructor(
     public elementos: ElementRef
   ) {
-    this.elementos.nativeElement.style.position = 'relative';
+    console.log(elementos)
+    this.animationPrueba();
   }
 
-  public animationPrueba(): void{
-    anime({
-      targets: this.elementos,
-      left: '1px'
-    })
-
+  public animationPrueba(){
+    const variable = animejs({
+      targets: 'div',
+      translateX: 100,
+      easing: 'easeOutQuad',
+      duration: 100,
+      loop: true
+    });
+    return variable;
   }
 
 
