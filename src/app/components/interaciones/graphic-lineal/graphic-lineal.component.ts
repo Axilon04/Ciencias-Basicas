@@ -9,20 +9,18 @@ import { amplitud,seno2 } from './calcular';
 })
 export class GraphicLinealComponent implements OnInit {
 
-  @Input() numero:number | any = 12.5;
-  @Input() tiempoF:number | any = 3;
-  @Input() tiempoR:number | any = 0.01;
-  @Input() omega:number | any = 4;
-  @Input() fi:number | any = 0.7;
+  @Input() numero:number | any;
+  @Input() tiempoF:number | any;
+  @Input() tiempoR:number | any;
+  @Input() omega:number | any;
+  @Input() fi:number | any;
   public tableElement = () => {
     // LLAMANDO ELEMENTO CANVAS
     const element = document.querySelector('#tabla') as HTMLCanvasElement;
     return element;
   }
 
-
   public grafica = () => {
-    let delayed: any;
     // CREACION DE LA GRAFICA USANDO LA LIBRERIA CHARTS JS
     var pruebas = new Chart(this.tableElement() ,{
       type: 'line',
@@ -37,24 +35,6 @@ export class GraphicLinealComponent implements OnInit {
         options: {
           // responsive: true,
           maintainAspectRatio: false,
-          animation: {
-            onComplete: () => {
-              delayed = true;
-            },
-            delay: (context) => {
-              let delay = 0;
-              if (context.type === 'data' && context.mode === 'default' && !delayed) {
-                delay = context.dataIndex * 30 + context.datasetIndex * 1000;
-              }
-              return delay;
-            },
-          },
-          scales: {
-            y: {
-              min: -20,
-              max: 20,
-            }
-          }
         }
     });
 
