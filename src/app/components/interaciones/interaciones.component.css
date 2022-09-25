@@ -11,7 +11,7 @@
     background-repeat : no-repeat ;
     background-size: cover;
     flex-direction: column;
-  
+
   }
   .encabezado{
     margin-top: -6px;
@@ -29,11 +29,11 @@
     border-style: none;
     outline: none;
     border-radius: 10px;
-    
+
   }
   .encabezado .buscar{
     margin-top: 22px;
-    
+
   }
   .encabezado .titulo{
     margin-top: 22px;
@@ -43,12 +43,12 @@
     height: 300px;
     margin-left: 57px;
     display: flex;
-    
+
     justify-content: center;
     color: white;
     /* background: linear-gradient(60deg, #16213E, #61A4BC, #FE7E6D, #E94560 );
     box-shadow: 0px 4px 11px 3px rgba(0, 0, 0, 0.25); */
-    background: linear-gradient(220.55deg, #FF0000 0%, #470000 100%);
+    background: linear-gradient(220.55deg, #FF0000 0%, #7e0606 100%);
     border-radius: 10px;
     border-style: none;
     outline: none;
@@ -59,7 +59,7 @@
   }
 
 
-  
+
   .contenedor-datos{
     width: 390px;
     height: 290px;
@@ -69,7 +69,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-    
+
   }
 
   .subtitle {
@@ -85,7 +85,7 @@
   }
 
   .imagen{
-    
+
     width: 290px;
     height: 190px;
     border-radius: 10px;

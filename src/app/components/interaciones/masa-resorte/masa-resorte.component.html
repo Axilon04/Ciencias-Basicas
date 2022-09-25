@@ -1,0 +1,21 @@
+<section class="contenedor-oscilacion" >
+  <div id="esfera" class="esfera" ></div>
+</section>
+
+<section class="contenedorFormula">
+  <p>X = </p>
+  <input placeholder="A" id="inputA" type="number" [(ngModel)]="amplitud">
+  <p>COS (</p>
+  <input placeholder="W" id="inputW" type="number" [(ngModel)]="w">
+  <p>t+</p>
+  <input placeholder="φ" id="inputF" type="number" [(ngModel)]="fase">
+  <p>)</p>
+</section>
+
+<section class="contenedorTime">
+  <input placeholder="Tiempo final (0 - ?)" type="number" id="inputTime" [(ngModel)]="time">
+</section>
+
+<section class="contenedorBotones">
+  <button id="boton_arrancar" class="start" >Start</button>
+</section>
