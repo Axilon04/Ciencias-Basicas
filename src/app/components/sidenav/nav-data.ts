@@ -13,6 +13,11 @@ export const navbarData = [
       routeLink: 'Asignaturas',
       icon: 'bi bi-journals',
       label: 'Asignaturas'
+  },
+  {
+      routeLink: 'About',
+      icon: 'bi bi-exclamation',
+      label: 'No joda Duvan'
   }
 
 ];

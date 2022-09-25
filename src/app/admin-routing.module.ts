@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { Calculo1Component } from './components/asignaturas/calculo1/calculo1.component';
 import { HomeComponent } from './components/home/home.component';
-
 import { GraphicLinealComponent } from './components/interaciones/graphic-lineal/graphic-lineal.component';
-import { AppComponent } from './app.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
-import { BodyComponent } from './components/body/body.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component'
+import { AboutComponent } from './components/about/about.component';
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -46,6 +43,10 @@ const routes: Routes = [
     path: 'masaResorteLine',
     component:MasaResorteComponent
   },
+  {
+    path: 'About',
+    component:AboutComponent
+  }
 ];
 
 @NgModule({

@@ -14,8 +14,13 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "lodash"
-
+              "seedrandom",
+              "javascript-natural-sort",
+              "animejs",
+              "typed-function",
+              "complex.js",
+              "fraction.js",
+              "escape-latex"
            ],
             "outputPath": "dist/ciencias-basicas",
             "index": "src/index.html",
