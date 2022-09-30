@@ -6,22 +6,15 @@ import * as anime from 'animejs';
 })
 export class AnimationsService {
 
-  public animationOscilation(element:string,positionDataY:string[],time:number){
-    let animation = anime({
-      targets: element,
+  public animationOscilation(positionDataY:string[],time:number){
+    let animation = {
       translateY: positionDataY,
       duration: time,
       easing: 'linear',
-    })
+    }
     return animation;
   }
 
-  public animationPrueba(){
-    anime({
-      targets: '.esfera',
-      translateX: 250,
-    });
-  }
 
   constructor() { }
 }

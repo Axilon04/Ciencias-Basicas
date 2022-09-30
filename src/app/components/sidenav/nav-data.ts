@@ -17,7 +17,7 @@ export const navbarData = [
   {
       routeLink: 'About',
       icon: 'bi bi-exclamation',
-      label: 'No joda Duvan'
+      label: 'Acerca de'
   }
 
 ];

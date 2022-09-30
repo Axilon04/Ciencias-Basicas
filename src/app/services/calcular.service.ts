@@ -1,20 +1,38 @@
 import { Injectable } from '@angular/core';
-import { AnimationsService } from './animations.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalcularService {
 
-  constructor(
-    private animationsServices: AnimationsService
-  ) { }
+  constructor( ) { }
 
   // FUNCION PARA SACAR LA POSITION
   private operationPosition(amplitud:number,w:number,fase:number,time:number){
     return amplitud * Math.cos(w*time + fase);
   }
 
+  //FUNCION PARA OBTENER LOS DATOS PARA EL EJEY DE LA GRAFICA
+  public positionDataY(amplitud:number,w:number,fase:number,time:number){
+    let ejeY:number[] = [];
+    let operation:number;
+    for (let index = 0; index < time; index += 0.8) {
+      operation = this.operationPosition(amplitud,w,fase,index);
+      ejeY.push(operation);
+    }
+    return ejeY;
+  }
+
+  //FUNCION PARA OBTENER LOS DATOS PARA EL EJEX DE LA GRAFICA
+  public positionDataX(time:number){
+    let ejeX:number[] = [];
+    for (let index = 0; index < time; index += 0.8) {
+      ejeX.push(index);
+    }
+    return ejeX;
+  }
+
+  /*
   //FUNCION PARA HACER LA ANIMACION OSCILANTE EN EL EJE Y
   public oscilationData(element: string, amplitud:number,w:number,fase:number,time:number){
     return new Promise ( (resolve,reject) =>{
@@ -30,29 +48,10 @@ export class CalcularService {
 
       //console.log("resultado esperado: ",positionDataAnimation)
 
-      this.animationsServices.animationOscilation(element,positionDataAnimation,duration);
+      this.animationsServices.animationOscilation(positionDataAnimation,duration);
 
     })
   }
-
-  //FUNCION PARA OBTENER LOS DATOS PARA EL EJEY DE LA GRAFICA
-  public positionDataY(amplitud:number,w:number,fase:number,time:number){
-    let ejeY:number[] = [];
-    let operation:number;
-    for (let index = 0; index < time; index++) {
-      operation = this.operationPosition(amplitud*100,w,fase,index);
-      ejeY.push(operation);
-    }
-    return ejeY;
-  }
-
-  //FUNCION PARA OBTENER LOS DATOS PARA EL EJEX DE LA GRAFICA
-  public positionDataX(amplitud:number,w:number,fase:number,time:number){
-    let ejeX:number[] = [];
-    for (let index = 0; index < time; index += 0.1) {
-      ejeX.push(index);
-    }
-    return ejeX;
-  }
+  */
 
 }

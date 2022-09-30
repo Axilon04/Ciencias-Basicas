@@ -12,4 +12,22 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  teacherData = [
+    {
+      title: 'Profesor Calculo I',
+      description: 'descripcion',
+      src: './assets/images/grafica.jpeg'
+    },
+    {
+      title:"Profesor Fisica I",
+      description: "descripcion",
+      src:"./assets/images/grafica.jpeg"
+    },
+    {
+      title:"Profesora Algebra",
+      description: "descripcion",
+      src:"./assets/images/grafica.jpeg"
+    }
+  ]
+
 }

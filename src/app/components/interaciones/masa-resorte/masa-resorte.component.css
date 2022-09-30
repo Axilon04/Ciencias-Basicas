@@ -103,4 +103,34 @@
     align-content: center;
     padding-right: 15px;
   }
+
+  .contenedorOscilactionData{
+    width: 600px;
+  }
+
+  .containerGraphics{
+    height: 300px;
+    width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(39, 39, 39);
+    border-radius: 20px;
+
+    margin: 15px;
+  }
+
+  .containerPrincipal{
+    width: 100%;
+    display: flex;
+  }
+
+  .graphicOscilation{
+    padding: 10px;
+    height: 400px ;
+    width: 400px ;
+  }
+
 }
