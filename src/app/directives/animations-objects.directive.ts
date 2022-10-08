@@ -10,6 +10,7 @@ import anime from 'animejs';
 export class AnimationsObjectsDirective {
 
   @Input() anime: any;
+  
   private animeInstance: any;
 
   constructor(
@@ -30,6 +31,7 @@ export class AnimationsObjectsDirective {
         ... this.anime
       })
     }
+    
   }
 
   private dispose(){

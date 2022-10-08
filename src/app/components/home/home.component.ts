@@ -54,4 +54,11 @@ export class HomeComponent implements OnInit {
     }
 
   ];
+
+  animatioContainerPresent={
+      translateY: [-600,0],
+      duration: 3000,
+  }
+  
+
 }

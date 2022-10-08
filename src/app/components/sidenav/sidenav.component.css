@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  width: 5rem;
+  width: 80px;
   height: 100vh;
   
 }
@@ -76,7 +76,7 @@ height: 100px;
 .sidenav-nav-link {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-left: 9px;
 
   height: 50px;
   color: #f3f3f3;
@@ -91,8 +91,10 @@ height: 100px;
   text-align: center;
 }
 .sidenav-nav .sidenav-nav-item .sidenav-nav-link .sidenav-link-text {
-  width: 90px;
+  width: 161px;
+  justify-content: center;
   margin-left: 1.5rem;
+  display: flex;
 }
   .sidenav-nav-item:hover {
   border-radius: 10px;

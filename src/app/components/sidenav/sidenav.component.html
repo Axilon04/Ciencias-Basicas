@@ -1,17 +1,18 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''"  [anime]="animationOpenNavar">
   <div class="logo-container">
-      <button class="logo" (click)="toggleCollapse()">
+    <!-- <button class="logo" (click)="toggleCollapse()"> -->
+      <button class="logo" (click)="navar ()" >
         <i class="bi bi-list"><img  src="./assets/images/logo_recortado.png" alt="logo"></i>
       </button>
-      <div class="logo-text" @fadeInOut *ngIf="collapsed"  ><img src="./assets/images/unimeta_recortado.png" alt="logo"></div>
+      <div class="logo-text"  *ngIf="OpenOrClose"  ><img src="./assets/images/unimeta_recortado.png" [anime]="animationLogoRecortado" alt="logo"></div>
 
   </div>
   <ul class="sidenav-nav">
-      <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <li class="sidenav-nav-item" *ngFor="let data of navData" >
           <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
               [routerLinkActiveOptions]="{exact: true}">
-              <i class="sidenav-link-icon" [class]="data.icon"></i>
-              <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+              <i class="sidenav-link-icon" [class]="data.icon" ></i>
+              <span class="sidenav-link-text" @fadeInOut *ngIf="OpenOrClose" [anime]="animationLogitos">
                   {{data.label}}
               </span>
           </a>
