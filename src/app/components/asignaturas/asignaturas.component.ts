@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-asignaturas',
   templateUrl: './asignaturas.component.html',
@@ -11,12 +12,29 @@ export class AsignaturasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  asignatura = [
+  materia = [
     {
-      materia:'Calculo I'
+      materia:'Calculo'
     },
     {
-      materia:'Calculo II'
+      materia:'Fisica'
+
     }
+  ]
+
+
+  asignatura = [
+    {
+      materia:'Calculo I (Diferencial)',
+      link:'Calculo-I'
+    },
+    {
+      materia:'Calculo II (Integral)',
+      link:'Calculo-II'
+    },
+    {
+      materia:'Calculo III (Multivariado)',
+      link:'Calculo-III'
+    },
   ]
 }

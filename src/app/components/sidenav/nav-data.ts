@@ -15,6 +15,11 @@ export const navbarData = [
       label: 'Asignaturas'
   },
   {
+     routeLink: 'Laboratorio',
+     icon: 'bi bi-terminal-fill',
+     label: 'Laboratorio'
+  },
+  {
       routeLink: 'About',
       icon: 'bi bi-exclamation',
       label: 'Acerca de'

@@ -9,6 +9,8 @@ import { TagencialComponent } from './components/interaciones/tagencial/tagencia
 import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component'
 import { AboutComponent } from './components/about/about.component';
+import { Calculo2Component } from './components/asignaturas/calculo2/calculo2.component';
+import { LaboratorioComponent } from './components/laboratorio/laboratorio.component';
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -18,15 +20,21 @@ const routes: Routes = [
   {
     path: 'Asignaturas',
     component:AsignaturasComponent,
-
+    children:[
+      {
+        path: 'Calculo-I',
+        component:Calculo1Component
+      },
+      {
+        path: 'Calculo-II',
+        component:Calculo2Component
+      }
+    ]
   },{
     path: 'Interaciones',
     component:InteracionesComponent,
   },
-  {
-    path: 'calculo1',
-    component:Calculo1Component
-  },
+
   {
     path: 'graphicLine',
     component:GraphicLinealComponent
@@ -46,6 +54,10 @@ const routes: Routes = [
   {
     path: 'About',
     component:AboutComponent
+  },
+  {
+    path: 'Laboratorio',
+    component:LaboratorioComponent
   }
 ];
 

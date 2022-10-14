@@ -1,3 +1,17 @@
-<mat-card *ngFor="let asignaturas of asignatura">
-  {{asignaturas.materia}}
-</mat-card>
+
+<mat-accordion class="" multi *ngFor="let materias of materia">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{materias.materia}}
+      </mat-panel-title>
+      <mat-panel-description>
+        CAlculo es para calcular
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <button mat-raised-button *ngFor="let asignaturas of asignatura" routerLink="{{asignaturas.link}}">
+      {{asignaturas.materia}}
+    </button>
+  </mat-expansion-panel>
+</mat-accordion>
+<router-outlet></router-outlet>
