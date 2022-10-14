@@ -7,51 +7,62 @@ export class CalcularService {
 
   constructor( ) { }
 
+  private ejeY: number[] = [];
+  private ejeX: number[] = [];
+  private animationEjeY:number [] = [];
+
   // FUNCION PARA SACAR LA POSITION
   private operationPosition(amplitud:number,w:number,fase:number,time:number){
-    return amplitud * Math.cos(w*time + fase);
+    let operation:number = amplitud * Math.cos(w*time + fase);
+    return (operation.toFixed(2)).toString();
   }
 
   //FUNCION PARA OBTENER LOS DATOS PARA EL EJEY DE LA GRAFICA
-  public positionDataY(amplitud:number,w:number,fase:number,time:number){
-    let ejeY:number[] = [];
-    let operation:number;
-    for (let index = 0; index < time; index += 0.8) {
-      operation = this.operationPosition(amplitud,w,fase,index);
-      ejeY.push(operation);
+  private positionDataY(amplitud:number,w:number,fase:number,time:number){
+    for (let index = 0; index < time; index += 1) {
+      this.ejeY.push(Number(this.operationPosition(amplitud,w,fase,index)));
     }
-    return ejeY;
   }
 
   //FUNCION PARA OBTENER LOS DATOS PARA EL EJEX DE LA GRAFICA
-  public positionDataX(time:number){
-    let ejeX:number[] = [];
-    for (let index = 0; index < time; index += 0.8) {
-      ejeX.push(index);
+  private positionDataX(time:number){
+    for (let index:number = 0; index < time; index += 1) {
+      this.ejeX.push(Number(index.toFixed(2)));
     }
-    return ejeX;
   }
 
-  /*
-  //FUNCION PARA HACER LA ANIMACION OSCILANTE EN EL EJE Y
-  public oscilationData(element: string, amplitud:number,w:number,fase:number,time:number){
-    return new Promise ( (resolve,reject) =>{
-
-      let positionDataAnimation:string[] = [];
-      let duration = time * 15;
-      let operation:number;
-
-      for (let index = 0; index < time; index++) {
-        operation = this.operationPosition(amplitud,w,fase,index);
-        positionDataAnimation.push(operation + "px");
-      }
-
-      //console.log("resultado esperado: ",positionDataAnimation)
-
-      this.animationsServices.animationOscilation(positionDataAnimation,duration);
-
-    })
+  // FUNCION PARA OBTENER LOS DATOS DE LA ANIMATIONS
+  private positionDataYAnimations(amplitud:number,w:number,fase:number,time:number){
+    for (let index = 0; index < time; index += 1) {
+      this.animationEjeY.push(Number(-(this.operationPosition(amplitud,w,fase,index))));
+    }
   }
-  */
+
+  //RELLENAR LOS VECTORES
+  public async starOperation(amplitud:number,w:number,fase:number,time:number){
+    await this.positionDataY(amplitud,w,fase,time);
+    await this.positionDataX(time);
+    await this.positionDataYAnimations(amplitud,w,fase,time);
+  }
+
+  //VACIAR VECTORES
+  public async endOperaion(){
+    this.ejeY.length = 0;
+    this.ejeX.length = 0;
+    this.animationEjeY.length = 0;
+  }
+
+  // OBTENER DATOS DE LOS EJES
+  public getEjeY(){
+    return this.ejeY;
+  }
+
+  public getEjeX(){
+    return this.ejeX;
+  }
+
+  public getDataAnimation(){
+    return this.animationEjeY;
+  }
 
 }

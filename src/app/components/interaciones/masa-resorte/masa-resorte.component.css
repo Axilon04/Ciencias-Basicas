@@ -116,8 +116,10 @@
     align-items: center;
     justify-content: center;
 
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 20px;
+    padding: 10px;
 
     margin: 15px;
   }
@@ -130,7 +132,7 @@
   .graphicOscilation{
     padding: 10px;
     height: 400px ;
-    width: 400px ;
+    width: 100% ;
   }
 
 }

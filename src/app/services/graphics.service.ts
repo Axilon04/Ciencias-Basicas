@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { CalcularService } from '../services/calcular.service';
+import { Chart } from "chart.js";
 
 @Injectable({
   providedIn: 'root'
 })
 export class GraphicsService {
 
-  constructor(
-    private calcularServices: CalcularService
-  ) { }
+  constructor() { }
 
   
 
