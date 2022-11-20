@@ -18,6 +18,11 @@ export const navbarData = [
       routeLink: 'About',
       icon: 'bi bi-exclamation',
       label: 'Acerca de'
+  },
+  {
+    routeLink: 'profesoresComponent',
+    icon: 'bi bi-exclamation',
+    label: 'Profesores'
   }
 
 ];

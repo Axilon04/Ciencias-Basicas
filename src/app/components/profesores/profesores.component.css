@@ -1,0 +1,91 @@
+:host{
+  /* COLORES TITULO */
+  --background-color: white;
+  --color-text: black;
+
+  /* COLOR DE FONDO CARD */
+  --background-color-card: rgb(255, 255, 255);
+}
+
+.contenedor-titulo-profesores{
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.contenedor-titulo-profesores h1{
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* CARD DE LOS PROFESORES */
+
+.containerCardProfesores{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardProfesores{
+  width: 300px;
+  height: 170px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: all 500ms;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.cardProfesores .imgProfesor{
+  width: 300px;
+  border-radius: 10px;
+  transition: all 500ms;
+}
+
+.cardProfesores .informacionProfesores,
+.cardProfesores .nombreProfesor{
+  height: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.cardProfesores:hover{
+  width: 300px;
+  height: 400px;
+  transform: scale(105%);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.cardProfesores:hover .imgProfesor{
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.cardProfesores:hover .informacionProfesores{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cardProfesores:hover .informacionProfesores,
+.cardProfesores:hover .nombreProfesor{
+  opacity: 1;
+  height: 50px;
+}
+
+.nombreProfesor{
+  text-align: center;
+}
+
+.descriptionProfesor{
+  text-align: center;
+}

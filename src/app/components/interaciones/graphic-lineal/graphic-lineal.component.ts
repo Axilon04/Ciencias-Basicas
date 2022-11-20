@@ -109,6 +109,6 @@ export class GraphicLinealComponent implements OnInit {
 
   ngOnInit(): void {
     this.grafica();
-
   }
+
 }

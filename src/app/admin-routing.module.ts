@@ -7,8 +7,9 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
 import { InteracionesComponent } from './components/interaciones/interaciones.component';
 import { TagencialComponent } from './components/interaciones/tagencial/tagencial.component';
 import { SenoComponent } from './components/interaciones/seno/seno.component';
-import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component'
+import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProfesoresComponent } from './components/profesores/profesores.component';
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'About',
     component:AboutComponent
+  },
+  {
+    path: 'profesoresComponent',
+    component: ProfesoresComponent
   }
 ];
 

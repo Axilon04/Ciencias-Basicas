@@ -1,0 +1,16 @@
+<section class="contenedor-titulo-profesores">
+  <h1>Profesores del departamento de ciencias basicas</h1>
+</section>
+
+<section class="containerCardProfesores">
+  <section class="cardProfesores" *ngFor="let data of profesores">
+
+    <img class="imgProfesor" [src]="data.src" alt="profesor">
+
+    <section class="informacionProfesores">
+      <h5 class="nombreProfesor"> {{ data.nombre }} </h5>
+      <p class="descriptionProfesor"> {{ data.description }} </p>
+    </section>
+
+  </section>
+</section>

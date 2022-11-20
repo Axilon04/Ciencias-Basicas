@@ -1,6 +1,4 @@
-import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, Output, EventEmitter, OnInit, HostListener, ViewEncapsulation } from '@angular/core';
-import anime from 'animejs';
 import { navbarData } from './nav-data';
 
 interface SideNavToggle {
@@ -102,10 +100,10 @@ export class SidenavComponent implements OnInit {
         this.clickCloseNavar ()
         this.DespliegueLogo ("reverse")
         this.DespliegueLogito ("reverse")
-        this.OpenOrClose=false 
+        this.OpenOrClose=false
       }
     }
-    
+
   }
   DespliegueLogo (vectorEscala: any){
     this.animationLogoRecortado={
@@ -119,7 +117,7 @@ export class SidenavComponent implements OnInit {
       translateX: [-50,0],
       delay: 200,
       opacity: [0,1],
-      
+
     }
   }
 }

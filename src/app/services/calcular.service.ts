@@ -7,60 +7,54 @@ export class CalcularService {
 
   constructor( ) { }
 
-  private ejeY: number[] = [];
+  private ejeYCoseno: number[] = [];
+  private ejeYSeno: number[] = [];
   private ejeX: number[] = [];
   private animationEjeY:number [] = [];
 
-  // FUNCION PARA SACAR LA POSITION
-  private operationPosition(amplitud:number,w:number,fase:number,time:number){
-    let operation:number = amplitud * Math.cos(w*time + fase);
-    return (operation.toFixed(2)).toString();
+  // FUNCION PARA SACAR LA POSITION COSENO
+  private operationPositionCoseno(amplitud:number,w:number,fase:number,time:number){
+    return ((amplitud * Math.cos(w*time + fase)).toFixed(2)).toString();
+  }
+
+  // FUNCION PARA SACAR LA POSITION SENO
+  private operationPositionSeno(amplitud:number,w:number,fase:number,time:number){
+    return ((amplitud * Math.sin(w*time + fase)).toFixed(2)).toString();
   }
 
   //FUNCION PARA OBTENER LOS DATOS PARA EL EJEY DE LA GRAFICA
-  private positionDataY(amplitud:number,w:number,fase:number,time:number){
-    for (let index = 0; index < time; index += 1) {
-      this.ejeY.push(Number(this.operationPosition(amplitud,w,fase,index)));
-    }
-  }
-
-  //FUNCION PARA OBTENER LOS DATOS PARA EL EJEX DE LA GRAFICA
-  private positionDataX(time:number){
-    for (let index:number = 0; index < time; index += 1) {
-      this.ejeX.push(Number(index.toFixed(2)));
-    }
-  }
-
-  // FUNCION PARA OBTENER LOS DATOS DE LA ANIMATIONS
-  private positionDataYAnimations(amplitud:number,w:number,fase:number,time:number){
-    for (let index = 0; index < time; index += 1) {
-      this.animationEjeY.push(Number(-(this.operationPosition(amplitud,w,fase,index))));
+  private dataOperations(amplitud:number,w:number,fase:number,time:number){
+    for (let index: number = 0; index < time; index += 0.01) {
+      this.ejeYCoseno.push(Number(this.operationPositionCoseno(amplitud,w,fase,index)));
+      this.ejeYSeno.push(Number(this.operationPositionSeno(amplitud,w,fase,index)));
+      this.animationEjeY.push(Number(-(Number(this.operationPositionCoseno(amplitud,w,fase,index)))));
+      this.ejeX.push(index);
     }
   }
 
   //RELLENAR LOS VECTORES
-  public async starOperation(amplitud:number,w:number,fase:number,time:number){
-    await this.positionDataY(amplitud,w,fase,time);
-    await this.positionDataX(time);
-    await this.positionDataYAnimations(amplitud,w,fase,time);
+  public starOperation(amplitud:number,w:number,fase:number,time:number){
+    this.dataOperations(amplitud,w,fase,time);
   }
 
   //VACIAR VECTORES
   public async endOperaion(){
-    this.ejeY.length = 0;
+    this.ejeYCoseno.length = 0;
+    this.ejeYSeno.length = 0;
     this.ejeX.length = 0;
     this.animationEjeY.length = 0;
   }
 
   // OBTENER DATOS DE LOS EJES
-  public getEjeY(){
-    return this.ejeY;
+  public getEjeYCoseno(){
+    return this.ejeYCoseno;
   }
-
+  public getEjeYSeno(){
+    return this.ejeYSeno
+  }
   public getEjeX(){
     return this.ejeX;
   }
-
   public getDataAnimation(){
     return this.animationEjeY;
   }

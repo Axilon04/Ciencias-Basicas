@@ -28,6 +28,7 @@ import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component';
 import { AnimationsObjectsDirective } from './directives/animations-objects.directive';
 import { GraphicsObjectsDirective } from './directives/graphics-objects.directive';
+import { ProfesoresComponent } from './components/profesores/profesores.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { GraphicsObjectsDirective } from './directives/graphics-objects.directiv
     MasaResorteComponent,
     AnimationsObjectsDirective,
     GraphicsObjectsDirective,
+    ProfesoresComponent,
   ],
   imports: [
     BrowserModule,

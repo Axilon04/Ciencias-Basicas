@@ -122,7 +122,12 @@
 
 
 
-
+  .contenedor-TecladoPrueba{
+    background-color: red;
+    color: white;
+    z-index: 10px;
+    transform: translateX(200px);
+  }
 
 
 }
