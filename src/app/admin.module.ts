@@ -7,8 +7,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatRippleModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +30,12 @@ import { SenoComponent } from './components/interaciones/seno/seno.component';
 import { MasaResorteComponent } from './components/interaciones/masa-resorte/masa-resorte.component';
 import { AnimationsObjectsDirective } from './directives/animations-objects.directive';
 import { GraphicsObjectsDirective } from './directives/graphics-objects.directive';
-import { ProfesoresComponent } from './components/profesores/profesores.component';
+import { Calculo2Component } from './components/asignaturas/calculo2/calculo2.component';
+import { Fisica1Component } from './components/asignaturas/fisica1/fisica1.component';
+import { Fisica2Component } from './components/asignaturas/fisica2/fisica2.component';
+import { Fisica3Component } from './components/asignaturas/fisica3/fisica3.component';
+import { Calculo3Component } from './components/asignaturas/calculo3/calculo3.component';
+import { LaboratorioComponent } from './components/laboratorio/laboratorio.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +52,13 @@ import { ProfesoresComponent } from './components/profesores/profesores.componen
     MasaResorteComponent,
     AnimationsObjectsDirective,
     GraphicsObjectsDirective,
-    ProfesoresComponent,
+    Calculo2Component,
+    Fisica1Component,
+    Fisica2Component,
+    Fisica3Component,
+    Calculo3Component,
+    LaboratorioComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -58,7 +71,10 @@ import { ProfesoresComponent } from './components/profesores/profesores.componen
     BrowserAnimationsModule,
     MatListModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
