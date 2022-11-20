@@ -10,24 +10,8 @@ export const navbarData = [
       label: 'Interaciones'
   },
   {
-      routeLink: 'Asignaturas',
-      icon: 'bi bi-journals',
-      label: 'Asignaturas'
-  },
-  {
-     routeLink: 'Laboratorio',
-     icon: 'bi bi-terminal-fill',
-     label: 'Laboratorio'
-  },
-  {
       routeLink: 'About',
       icon: 'bi bi-exclamation',
       label: 'Acerca de'
-  },
-  {
-    routeLink: 'profesoresComponent',
-    icon: 'bi bi-exclamation',
-    label: 'Profesores'
   }
-
 ];

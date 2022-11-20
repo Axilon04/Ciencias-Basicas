@@ -17,7 +17,8 @@ const routes: Routes = [
   component:HomeComponent,
 
   children: [
-  ]},
+  ]
+  },
   {
     path: 'Asignaturas',
     component:AsignaturasComponent,
@@ -55,6 +56,14 @@ const routes: Routes = [
   {
     path: 'About',
     component:AboutComponent
+  },
+  {
+    path: 'Laboratorio',
+    component: LaboratorioComponent
+  },
+  {
+    path: 'profesoresComponent',
+    component: ProfesoresComponent
   }
 ];
 
