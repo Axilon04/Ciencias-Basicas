@@ -9,12 +9,9 @@ export class GraphicsService {
 
   constructor() { }
 
-
   // CREACION, PERSONALIZACION Y MANEJO DE LAS GRAFICAS
   public tabla(dataConfig:graphic, graphicConfig: graphicEjeyCustom){
     return new Promise((resolve,reject)=>{
-      const element = document.querySelector('#graphic') as HTMLCanvasElement;
-
       const totalDuration = dataConfig.time;
       const delayBetweenPoints = totalDuration / dataConfig.longEje;
       const previousY = (ctx: any) =>
@@ -24,24 +21,30 @@ export class GraphicsService {
               .getDatasetMeta(ctx.datasetIndex)
               .data[ctx.index - 1].getProps(['y'], true).y;
 
-      let graphic = new Chart(dataConfig.element ,{
+      var graphic = new Chart(dataConfig.element ,{
         type: 'line',
-
         data: {
           datasets: [{
             //EJE Y
-              label: graphicConfig.labelVistaPoint,
-              data: dataConfig.ejeycoseno,
-              backgroundColor: 'rbga(255.99.132)', //no idea pero no eliminar
-              borderColor: graphicConfig.borderColor, // color de la linea
-              borderWidth: graphicConfig.borderWidth, // tamano de la linea
-              tension: graphicConfig.tension, // flexibilidad de la linea
-              pointRadius: graphicConfig.pointRadius, // tamano del circulo
-            }],
-            // EJE X
-            labels: dataConfig.ejex,
+            label: graphicConfig.labelVistaPoint,
+            data: dataConfig.ejeycoseno,
+            backgroundColor: 'rbga(255.99.132)', //no idea pero no eliminar
+            borderColor: graphicConfig.borderColor, // color de la linea
+            borderWidth: graphicConfig.borderWidth, // tamano de la linea
+            tension: graphicConfig.tension, // flexibilidad de la linea
+            pointRadius: graphicConfig.pointRadius, // tamano del circulo
+          },
+          {
+            label: 'eje central',
+            data: dataConfig.ejex,
+            backgroundColor: 'rbga(0.0.0.8)', //no idea pero no eliminar
+            borderColor: 'rgba(176, 175, 175, 1)', // color de la linea
+            borderWidth: graphicConfig.borderWidth, // tamano de la linea
+            tension: graphicConfig.tension, // flexibilidad de la linea
+            pointRadius: graphicConfig.pointRadius, // tamano del circulo
+          }],
+          labels: dataConfig.ejex,
         },
-
         options: {
           scales: {
             y: {
@@ -54,7 +57,7 @@ export class GraphicsService {
           plugins: {
             title: {
                 display: true,
-                text: graphicConfig.titleText
+                text: graphicConfig.titleText,
             },
             tooltip: {
               displayColors: false,

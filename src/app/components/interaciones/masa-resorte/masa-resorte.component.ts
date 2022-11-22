@@ -47,8 +47,6 @@ export class MasaResorteComponent implements OnInit {
     const element = document.querySelector('#graphic') as HTMLCanvasElement;
     const elementContainer = document.querySelector('#contenedor-graphics') as HTMLCanvasElement;
 
-
-      //await this.calcularService.endOperaion();
       this.graphics.updateGraphicChart(elementContainer,element)
 
       await this.calcularService.endOperaion()
@@ -60,11 +58,11 @@ export class MasaResorteComponent implements OnInit {
             ejeycoseno: this.calcularService.getEjeYCoseno(),
             ejeyseno: 0,
             ejex: this.calcularService.getEjeX(),
-            time: this.time,
+            time: this.timeConfig,
             longEje: this.calcularService.getEjeX().length,
           },{
             labelVistaPoint: 'A cos( Wt + φ )',
-            borderColor: 'green',
+            borderColor: 'black',
             borderWidth: 3,
             tension: 0.2,
             pointRadius: 0,
