@@ -36,6 +36,8 @@ import { Fisica2Component } from './components/asignaturas/fisica2/fisica2.compo
 import { Fisica3Component } from './components/asignaturas/fisica3/fisica3.component';
 import { Calculo3Component } from './components/asignaturas/calculo3/calculo3.component';
 import { LaboratorioComponent } from './components/laboratorio/laboratorio.component';
+import { GeogebraRectaEnLaCurvaComponent } from './components/interaciones/geogebra-recta-en-la-curva/geogebra-recta-en-la-curva.component';
+import { GeogebraFuncionVectorialComponent } from './components/interaciones/geogebra-funcion-vectorial/geogebra-funcion-vectorial.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { LaboratorioComponent } from './components/laboratorio/laboratorio.compo
     Fisica3Component,
     Calculo3Component,
     LaboratorioComponent,
+    GeogebraRectaEnLaCurvaComponent,
+    GeogebraFuncionVectorialComponent,
 
   ],
   imports: [

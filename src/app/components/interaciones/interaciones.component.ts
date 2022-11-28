@@ -37,6 +37,19 @@ export class InteracionesComponent implements OnInit {
       subtitle: "descripcion",
       src:"./assets/images/seno1.png"
     }
-
+    ,
+    {
+      routerlink:"/GeogebraRectaEnLaCurvaComponent",
+      title:"recta tangente a una curva de la forma xª",
+      subtitle: "descripcion",
+      src:"./assets/images/WhatsApp Image 2022-11-27 at 7.36.08 PM.jpeg"
+    }//GeogebraFuncionVectorial
+    ,
+    {
+      routerlink:"/GeogebraFuncionVectorial",
+      title:"Funcion vectorial",
+      subtitle: "descripcion",
+      src:"./assets/images/WhatsApp Image 2022-11-27 at 7.39.39 PM.jpeg"
+    }
   ]
 }

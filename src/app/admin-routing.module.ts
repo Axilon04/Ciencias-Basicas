@@ -12,6 +12,9 @@ import { AboutComponent } from './components/about/about.component';
 import { Calculo2Component } from './components/asignaturas/calculo2/calculo2.component';
 import { LaboratorioComponent } from './components/laboratorio/laboratorio.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
+import { GeogebraRectaEnLaCurvaComponent } from './components/interaciones/geogebra-recta-en-la-curva/geogebra-recta-en-la-curva.component';
+import { GeogebraFuncionVectorialComponent } from "./components/interaciones/geogebra-funcion-vectorial/geogebra-funcion-vectorial.component";
+
 const routes: Routes = [
   { path: '',
   component:HomeComponent,
@@ -64,6 +67,14 @@ const routes: Routes = [
   {
     path: 'profesoresComponent',
     component: ProfesoresComponent
+  },
+  {
+    path: 'GeogebraRectaEnLaCurvaComponent',
+    component: GeogebraRectaEnLaCurvaComponent
+  },
+  {
+    path: 'GeogebraFuncionVectorial',
+    component: GeogebraFuncionVectorialComponent
   }
 ];
 
